@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-07-25T16:25:08 PET" name="Surefire suite" finished-at="2021-07-25T16:25:08 PET" duration-ms="162">
+    <groups>
+    </groups>
+    <test started-at="2021-07-25T16:25:08 PET" name="Surefire test" finished-at="2021-07-25T16:25:08 PET" duration-ms="162">
+      <class name="SkyalertTest">
+        <test-method signature="removeObserver()" started-at="2021-07-25T16:25:08 PET" name="removeObserver" finished-at="2021-07-25T16:25:08 PET" duration-ms="38" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeObserver -->
+        <test-method signature="findMatch()" started-at="2021-07-25T16:25:08 PET" name="findMatch" finished-at="2021-07-25T16:25:08 PET" duration-ms="67" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findMatch -->
+        <test-method signature="addAerolinea()" started-at="2021-07-25T16:25:08 PET" name="addAerolinea" finished-at="2021-07-25T16:25:08 PET" duration-ms="68" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addAerolinea -->
+        <test-method signature="cantFindMatch()" started-at="2021-07-25T16:25:08 PET" name="cantFindMatch" finished-at="2021-07-25T16:25:08 PET" duration-ms="68" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cantFindMatch -->
+        <test-method signature="addObserver()" started-at="2021-07-25T16:25:08 PET" name="addObserver" finished-at="2021-07-25T16:25:08 PET" duration-ms="36" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addObserver -->
+      </class> <!-- SkyalertTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

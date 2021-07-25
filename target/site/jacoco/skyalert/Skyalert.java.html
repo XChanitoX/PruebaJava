@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Skyalert.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">PracticandoJava</a> &gt; <a href="index.source.html" class="el_package">skyalert</a> &gt; <span class="el_source">Skyalert.java</span></div><h1>Skyalert.java</h1><pre class="source lang-java linenums">package skyalert;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+public class Skyalert {
+<span class="fc" id="L9">    private List&lt;Usuario&gt; usuarios = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L10">    private List&lt;Aerolinea&gt; aerolineas = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L11">    Logger logger = Logger.getLogger(Skyalert.class.getName());</span>
+
+<span class="fc" id="L13">    private static Skyalert instance = new Skyalert();</span>
+
+<span class="fc" id="L15">    private Skyalert(){}</span>
+
+    public static Skyalert getInstance(){
+<span class="pc bpc" id="L18" title="1 of 2 branches missed.">        if (instance == null)</span>
+<span class="nc" id="L19">            instance = new Skyalert();</span>
+<span class="fc" id="L20">        return instance;</span>
+    }
+
+    public void addAerolinea(Aerolinea aerolinea) {
+<span class="fc" id="L24">        this.aerolineas.add(aerolinea);</span>
+<span class="fc" id="L25">    }</span>
+
+    public void addObserver(Usuario usuario){
+<span class="fc" id="L28">        this.usuarios.add(usuario);</span>
+<span class="fc" id="L29">    }</span>
+
+    public void removeObserver(Usuario usuario) {
+<span class="fc" id="L32">        this.usuarios.remove(usuario);</span>
+<span class="fc" id="L33">    }</span>
+
+    public boolean findMatch() {
+<span class="fc" id="L36">        boolean alerta = false;</span>
+<span class="fc bfc" id="L37" title="All 2 branches covered.">        for (Usuario usuario : usuarios) {</span>
+<span class="fc bfc" id="L38" title="All 2 branches covered.">            for (Aerolinea aerolinea : aerolineas) {</span>
+<span class="fc bfc" id="L39" title="All 2 branches covered.">                if (usuario.getPrecio() / usuario.getDuracion() == aerolinea.getTarifa()) {</span>
+<span class="fc" id="L40">                    alerta = true;</span>
+<span class="fc" id="L41">                    usuario.update(aerolinea.getName());</span>
+<span class="fc" id="L42">                    var match = usuario.getName() + &quot; &amp; &quot; + aerolinea.getName();</span>
+<span class="fc" id="L43">                    logger.log(Level.INFO, &quot;Match found! {0}&quot;, match);</span>
+                }
+<span class="fc" id="L45">            }</span>
+<span class="fc" id="L46">        }</span>
+<span class="fc" id="L47">        return alerta;</span>
+    }
+
+    public List&lt;Aerolinea&gt; getAerolineas() {
+<span class="fc" id="L51">        return aerolineas;</span>
+    }
+
+    public List&lt;Usuario&gt; getUsuarios() {
+<span class="fc" id="L55">        return usuarios;</span>
+    }
+
+    public void clear(){
+<span class="fc" id="L59">        usuarios.clear();</span>
+<span class="fc" id="L60">        aerolineas.clear();</span>
+<span class="fc" id="L61">    }</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

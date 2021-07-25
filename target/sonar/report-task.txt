@@ -1,0 +1,7 @@
+organization=xchanitox
+projectKey=XChanitoX_PruebaJava
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.22054
+dashboardUrl=https://sonarcloud.io/dashboard?id=XChanitoX_PruebaJava
+ceTaskId=AXrfjwkgEOSiCB9j-1O7
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXrfjwkgEOSiCB9j-1O7
