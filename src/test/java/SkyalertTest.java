@@ -7,12 +7,21 @@ import org.testng.Assert;
 
 public class SkyalertTest {
 
+
+
     Skyalert skyalert = Skyalert.getInstance();
+
+    @Test
+    public void main() {
+        MainClass.main(new String[0]);
+        Assert.assertTrue(true);
+    }
 
     @Test
     public void addAerolinea() {
         skyalert.clear();
         var aerolinea = new Aerolinea(50,"Test");
+        aerolinea.setTarifa(80);
         skyalert.addAerolinea(aerolinea);
         var name = skyalert.getAerolineas().get(0).getName();
         Assert.assertEquals(name, "Test");
@@ -22,6 +31,7 @@ public class SkyalertTest {
     public void addObserver() {
         skyalert.clear();
         var usuario = new Usuario(100,2,"Test");
+        var aerolinea = usuario.getAerolinea();
         skyalert.addObserver(usuario);
         var name = skyalert.getUsuarios().get(0).getName();
         Assert.assertEquals(name, "Test");
