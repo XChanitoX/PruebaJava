@@ -1,21 +1,12 @@
 import org.junit.Test;
 import skyalert.Aerolinea;
-import skyalert.MainClass;
 import skyalert.Skyalert;
 import skyalert.Usuario;
 import org.testng.Assert;
 
 public class SkyalertTest {
 
-
-
     Skyalert skyalert = Skyalert.getInstance();
-
-    @Test
-    public void main() {
-        MainClass.main(new String[0]);
-        Assert.assertTrue(true);
-    }
 
     @Test
     public void addAerolinea() {

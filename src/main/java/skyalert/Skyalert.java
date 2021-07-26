@@ -10,7 +10,7 @@ public class Skyalert {
     private List<Aerolinea> aerolineas = new ArrayList<>();
     Logger logger = Logger.getLogger(Skyalert.class.getName());
 
-    private static Skyalert instance = new Skyalert();
+    private static Skyalert instance;
 
     private Skyalert(){}
 

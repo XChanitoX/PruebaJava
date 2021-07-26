@@ -10,13 +10,13 @@ public class Skyalert {
 <span class="fc" id="L10">    private List&lt;Aerolinea&gt; aerolineas = new ArrayList&lt;&gt;();</span>
 <span class="fc" id="L11">    Logger logger = Logger.getLogger(Skyalert.class.getName());</span>
 
-<span class="fc" id="L13">    private static Skyalert instance = new Skyalert();</span>
+    private static Skyalert instance;
 
 <span class="fc" id="L15">    private Skyalert(){}</span>
 
     public static Skyalert getInstance(){
-<span class="pc bpc" id="L18" title="1 of 2 branches missed.">        if (instance == null)</span>
-<span class="nc" id="L19">            instance = new Skyalert();</span>
+<span class="fc bfc" id="L18" title="All 2 branches covered.">        if (instance == null)</span>
+<span class="fc" id="L19">            instance = new Skyalert();</span>
 <span class="fc" id="L20">        return instance;</span>
     }
 
